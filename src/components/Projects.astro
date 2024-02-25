@@ -1,18 +1,154 @@
+---
+import React from '../icons/React.astro'
+import Mongo from '../icons/Mongo.astro'
+import ExpressJS from '../icons/ExpressJS.astro'
+import NodeJS from '../icons/NodeJS.astro'
+import Linux from '../icons/Linux.astro'
+import Css from '../icons/Css.astro'
+import Html from '../icons/Html.astro'
+import Javascript from '../icons/Javascript.astro'
+---
+
+
 <section>
-    <h4>Projects</h4>
-
+    <h4 class="text-white font-bold text-2xl mt-32 mb-10">Projects</h4>
     <div class="flex flex-col">
+        <div class="flex gap-5 mb-16">
+            <img src="../../assets/snake.jpg" class="img-project w-96 h-60 mr-4 rounded-lg" />
+            <div>
+                <h2 class="text-white text-xl font-bold mb-5">Game Snake</h2>
+                <p class="text-zinc-400">This was my first game developed with pure javascript.</p>
+                <article class="flex gap-3 mt-6 mb-6">
+                   <button class="btn-icon"><Css /></button>
+                    <button class="btn-icon"><Html /></button>
+                    <button class="btn-icon"><Javascript /></button>
+                </article>
+                
+                <div class="flex gap-4">
+                    <a href="https://github.com/Deiiivy/game-snake" class="btn-code bg-slate-500 text-zinc-300 px-4 py-2 rounded-xl hover:bg-opacity-20 cursor-pointer">Code</a>
+                    <a href="https://deiiivy.github.io/game-snake/" class="btn-code bg-slate-500  text-zinc-300 px-4 py-2 rounded-xl hover:bg-opacity-20 cursor-pointer">Live</a>
+                </div>
 
-        <div class="flex">
-
-            <div class="flex">
-            <img />
-            <h2>GeoAPP</h2>
-            <p>Web site for travelers created with the mern
-                stack, worked in teamwork
-            </p>
             </div>
         </div>
 
+    <div class="flex gap-5">
+        <img src="../../assets/GeoAPP.png" class="img-project w-9/12 h-60 mr-4 rounded-lg" />
+        <div>
+            <h2 class="text-white text-xl font-bold mb-5">GeoAPP</h2>
+            <p class="text-zinc-400">Web site for travelers created with the MERN stack, worked in teamwork.</p>
+            <article class="flex gap-3 mt-6 mb-6">
+               <button class="btn-icon"><Mongo /></button>
+                <button class="btn-icon"><ExpressJS /></button>
+                <button class="btn-icon"><React /></button>
+                <button class="btn-icon"><NodeJS /></button>
+            </article>
+            
+            <div class="flex gap-4">
+                <a href="https://github.com/samuelzapatam22/GeoApp" class="btn-code bg-slate-500 text-zinc-300 px-4 py-2 rounded-xl hover:bg-opacity-20 cursor-pointer">Code</a>
+                <a href="https://monumental-sfogliatella-6e9c8f.netlify.app/" class="btn-code bg-slate-500  text-zinc-300 px-4 py-2 rounded-xl hover:bg-opacity-20 cursor-pointer">Live</a>
+            </div>
+
+        </div>
     </div>
+
+    <div class="flex mt-16 gap-5">
+        <img src="../../assets/users.jpg" class="img-project w-4/6 h-60 mr-4 rounded-lg" />
+        <div>
+            <h2 class="text-white text-xl font-bold mb-5">CRUD FULL STACK USERS</h2>
+            <p class="text-zinc-400">This is a full stack project to manage and administer user data.</p>
+            <article class="flex gap-3 mt-6 mb-6">
+               <button class="btn-icon"><Mongo /></button>
+                <button class="btn-icon"><ExpressJS /></button>
+                <button class="btn-icon"><React /></button>
+                <button class="btn-icon"><NodeJS /></button>
+            </article>
+            
+            <div class="flex gap-4">
+                <a href="https://github.com/Deiiivy/CRUD_USER_FULLSTACK" class="btn-code bg-slate-500 text-zinc-300 px-4 py-2 rounded-xl hover:bg-opacity-20 cursor-pointer">Code</a>
+        </div>
+        
+    </div>
+
+    </div>
+
+    <div class="flex mt-16 gap-5">
+        <img src="../../assets/exito.jpg" class="img-exito h-60 mr-4 rounded-lg" />
+        <div>
+            <h2 class="text-white text-xl font-bold mb-5">EXITO clon</h2>
+            <p class="text-zinc-400">Develop a clone of the Éxito application, replicating its functions and user experience.</p>
+            <article class="flex gap-3 mt-6 mb-6">
+               <button class="btn-icon"><Mongo /></button>
+                <button class="btn-icon"><ExpressJS /></button>
+                <button class="btn-icon"><React /></button>
+                <button class="btn-icon"><NodeJS /></button>
+            </article>
+            
+            <div class="flex gap-4">
+                <a href="https://github.com/Deiiivy/CRUD_USER_FULLSTACK" class="btn-code bg-slate-500 text-zinc-300 px-4 py-2 rounded-xl hover:bg-opacity-20 cursor-pointer">Code</a>
+        </div>
+    </div>
+    
+    </div>
+
+
+    <div class="flex mt-16 gap-5">
+        <img src="../../assets/new-year.jpg" class="img-exito h-60 mr-4 rounded-lg" />
+        <div>
+            <h2 class="text-white text-xl font-bold mb-5">Countdown Timer</h2>
+            <p class="text-zinc-400">New year countdown timer project.</p>
+            <article class="flex gap-3 mt-6 mb-6">
+                <button class="btn-icon"><Css /></button>
+                <button class="btn-icon"><Html /></button>
+                <button class="btn-icon"><Javascript /></button>
+            </article>
+            
+            <div class="flex gap-4">
+                <a href="https://github.com/Deiiivy/Countdown-Timer" class="btn-code bg-slate-500 text-zinc-300 px-4 py-2 rounded-xl hover:bg-opacity-20 cursor-pointer">Code</a>
+        </div>
+    </div>
+    
+    </div>
+
+    
 </section>
+
+
+<style>
+
+    .btn-icon {
+        transition: transform 0.3s ease;
+    }
+
+    .btn-icon:hover {
+        transform: translateY(-4px);
+    }
+
+    .btn.code:hover {
+        transition: transform 0.3s ease;
+    }
+
+    .img-project {
+    border-top: 35px solid rgba(34, 33, 33, 0.808);
+    border-left: 35px solid rgba(34, 33, 33, 0.808);
+    transition: transform 0.3s ease;
+    }
+
+     .img-project:hover {
+        transform: translate(-4px);
+        cursor: pointer;
+     }
+
+     .img-exito {
+        width: 364px;
+        border-top: 35px solid rgba(34, 33, 33, 0.808);
+    border-left: 35px solid rgba(34, 33, 33, 0.808);
+    transition: transform 0.3s ease;
+     }
+
+     .img-exito:hover {
+        transform: translate(-4px);
+        cursor: pointer;
+     }
+
+</style>
