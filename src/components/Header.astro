@@ -1,0 +1,62 @@
+---
+---
+<section>
+    <div class="flex items-center justify-between">
+        <div class="flex items-center">
+            <img src="../../assets/portfolio-image.jpg" alt="Me" class="w-12 rounded-full" />
+            <div class="flex flex-col m-2">
+                <h6 class="font-bold text-zinc-200">Deivy Patiño</h6>
+                <p>Software Developer</p>
+            </div>
+        </div>
+        <div class="flex gap-4 text-white">
+            <a class="cursor-pointer hover:underline" id="link1">Home</a>
+            <a class="cursor-pointer hover:underline" id="link2">Projects</a>
+            <a class="cursor-pointer hover:underline" id="link3">About</a>
+            <a class="cursor-pointer hover:underline" id="link4">Education</a>
+            <a class="cursor-pointer hover:underline" id="link5">Skills</a>
+        </div>
+    </div>
+</section>
+
+
+<style>
+a.cursor-pointer {
+    transition: transform 0.3s ease; 
+    display: inline-block; 
+}
+
+a.cursor-pointer:hover {
+    transform: translateY(-2px);
+}
+
+</style>
+
+<script>
+const link1 = document.getElementById('link1');
+const link2 = document.getElementById('link2');
+const link3 = document.getElementById('link3');
+const link4 = document.getElementById('link4')
+const link5 = document.getElementById('link5')
+
+link1.addEventListener('click', scrollToSection);
+link2.addEventListener('click', scrollToSection);
+link3.addEventListener('click', scrollToSection);
+link4.addEventListener('click', scrollToSection);
+link5.addEventListener('click', scrollToSection)
+
+
+function scrollToSection(event) {
+  event.preventDefault(); 
+
+  let targetSectionId = event.currentTarget.id.replace('link', ''); 
+
+  let targetSection = document.getElementById(`section${targetSectionId}`);
+
+  if (targetSection) {
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+  }
+  
+}
+
+</script>

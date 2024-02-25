@@ -1,5 +1,7 @@
 ---
-
+import Hero from '../components/Hero.astro'
+import Header from '../components/Header.astro'
+import Projects from '../components/Projects.astro'
 ---
 
 <html lang="en">
@@ -11,6 +13,58 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		
+		<Header />
+		<Hero />
+		<Projects />
 	</body>
 </html>
+
+
+<style is:global>
+	 html {
+    background: #fff;
+    letter-spacing: -0.025rem;
+	background: radial-gradient(circle, #1A1A2E, #000000);
+  }
+
+  body,
+  figure {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    font-family:
+      sans-serif;
+  }
+
+  p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    text-wrap: pretty;
+  }
+
+
+  section {
+        max-width: 700px;
+        margin: 25px auto 52px;
+    }
+</style>

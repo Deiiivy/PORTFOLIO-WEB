@@ -1,0 +1,43 @@
+---
+import Download from '../icons/Download.astro'
+import Github from '../icons/Github.astro'
+import Linkedin from '../icons/Linkedin.astro'
+---
+
+<section class="flex flex-col items-center justify-center">
+    <a href="../../assets/HojaDeVida.pdf" download="HojaDeVida" class="flex gap-2 py-2 px-5 rounded-xl bg-zinc-100 bg-opacity-5 cursor-progress border border-slate-300 border-opacity-10
+    text-neutral-400 hover:bg-zinc-700">
+        <Download />
+        Download CV
+</a>
+
+<div class="m-10">
+<h2 class="text-blue-800 font-bold font-mono text-3xl text-center">Software Developer</h2>
+<h3 class="text-white font-bold font-mono mt-4 text-3xl text-center">Deivy Patiño</h3>
+
+<p class="text-center font-sans text-xl text-slate-400  mt-4">Always Learning about new paradigms and technologies to apply right solution in 
+    the right place
+</p>
+</div>
+
+<div class="social flex gap-7">
+    <a href="https://github.com/Deiiivy">
+        <Github />
+    </a>
+
+    <a href="https://www.linkedin.com/in/deivy-programmer/">
+        <Linkedin />
+    </a>
+</div>
+
+</section>
+
+
+<style>
+    a:hover {
+        transition: transform 0.3s ease;
+        transform: translateY(-3px);
+    }
+</style>
+
+
