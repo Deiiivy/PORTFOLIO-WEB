@@ -1,7 +1,7 @@
 ---
 ---
 <section>
-    <div class="flex items-center justify-between">
+    <div class="flex items-center justify-between fixed z-20 bg-stone-600 bg-opacity-5 p-2">
         <div class="flex items-center">
             <img src="../../assets/portfolio-image.jpg" alt="Me" class="w-12 rounded-full" />
             <div class="flex flex-col m-2">
@@ -9,12 +9,11 @@
                 <p>Software Developer</p>
             </div>
         </div>
-        <div class="flex gap-4 text-white">
-            <a class="cursor-pointer hover:underline" id="link1">Home</a>
-            <a class="cursor-pointer hover:underline" id="link2">Projects</a>
-            <a class="cursor-pointer hover:underline" id="link3">About</a>
-            <a class="cursor-pointer hover:underline" id="link4">Education</a>
-            <a class="cursor-pointer hover:underline" id="link5">Skills</a>
+        <div class="flex gap-4 text-white ml-40">
+            <a class="cursor-pointer hover:underline" href="#home">Home</a>
+            <a class="cursor-pointer hover:underline" href="#projects">Projects</a>
+            <a class="cursor-pointer hover:underline" href="#education">Education</a>
+            <a class="cursor-pointer hover:underline" href="#skills">Skills</a>
         </div>
     </div>
 </section>
@@ -32,31 +31,20 @@ a.cursor-pointer:hover {
 
 </style>
 
+
 <script>
-const link1 = document.getElementById('link1');
-const link2 = document.getElementById('link2');
-const link3 = document.getElementById('link3');
-const link4 = document.getElementById('link4')
-const link5 = document.getElementById('link5')
-
-link1.addEventListener('click', scrollToSection);
-link2.addEventListener('click', scrollToSection);
-link3.addEventListener('click', scrollToSection);
-link4.addEventListener('click', scrollToSection);
-link5.addEventListener('click', scrollToSection)
-
-
-function scrollToSection(event) {
-  event.preventDefault(); 
-
-  let targetSectionId = event.currentTarget.id.replace('link', ''); 
-
-  let targetSection = document.getElementById(`section${targetSectionId}`);
-
-  if (targetSection) {
-    targetSection.scrollIntoView({ behavior: 'smooth' });
-  }
-  
-}
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll("a[href^='#']");
+    links.forEach(link => {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    });
+});
 
 </script>
