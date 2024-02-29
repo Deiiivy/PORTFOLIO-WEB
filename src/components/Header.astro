@@ -9,7 +9,7 @@
 </head>
 <body>
     <section>
-        <div class="-full top-0 fixed flex justify-between items-center py-1 px-5 z-20  bg-opacity-10  dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 backdrop-blur-lg">
+        <div class="-full top-0 fixed flex justify-between items-center py-1 px-5 z-20  bg-opacity-10   dark:bg-opacity-80 backdrop-blur-lg max-md:w-full">
             <div class="flex items-center">
                 <img src="../../me-removebg-preview.png" alt="Me" class="w-12 rounded-full" />
                 <div class="flex flex-col m-2">
@@ -23,12 +23,20 @@
                 </button>
             </div>
             
-            <div id="menuItems" class=" gap-4 text-white ml-40 max-sm:ml-2 max-sm:absolute max-sm:top-24 sm:flex max-sm:bg-zinc-800 max-sm:p-5 max-sm:rounded transition-all duration-500 ease-in-out hidden">
+            <div id="menuItems" class="gap-4 text-white ml-40 max-sm:ml-2 max-sm:absolute max-sm:top-24 sm:flex max-sm:bg-zinc-800 max-sm:p-5 max-sm:rounded transition-all duration-500 ease-in-out hidden">
                 <a class="cursor-pointer hover:underline max-sm:ml-5" href="#home">Home</a>
                 <a class="cursor-pointer hover:underline max-sm:ml-5" href="#projects">Projects</a>
                 <a class="cursor-pointer hover:underline max-sm:ml-5" href="#education">Education</a>
                 <a class="cursor-pointer hover:underline max-sm:ml-5 mr-10" href="#skills">Skills</a>
+                <button id="idiomas-button">
+               <!-- <img class="w-6 cursor-pointer" src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20aria-hidden='true'%20focusable='false'%20viewBox='0%200%2024%2024'%20class='option-icon'%3e%3cpath%20d='M0%200h24v24H0z'%20fill='none'/%3e%3cpath%20d='%20M12.87%2015.07l-2.54-2.51.03-.03c1.74-1.94%202.98-4.17%203.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5%207.92%2010.44%209.75%209%2011.35%208.07%2010.32%207.3%209.19%206.69%208h-2c.73%201.63%201.73%203.17%202.98%204.56l-5.09%205.02L4%2019l5-5%203.11%203.11.76-2.04zM18.5%2010h-2L12%2022h2l1.12-3h4.75L21%2022h2l-4.5-12zm-2.62%207l1.62-4.33L19.12%2017h-3.24z%20'%20fill='white'/%3e%3c/svg%3e" alt="">
+            </button>-->
+                <div id="idioma-details" class="flex flex-col gap-4 absolute top-16 right-1 bg-slate-900 border border-gray-700 px-2 py-4 rounded-md text-white hidden">
+                    <span class="text-sm font-bold cursor-pointer hover:text-sky-700">Español</span>
+                    <span class="text-sm font-bold cursor-pointer hover:text-sky-700">Ingles</span>
             </div>
+            </div>
+
         </div>
         </section>
 </body>
@@ -54,18 +62,9 @@ document.getElementById('menuButton').addEventListener('click', function() {
         document.getElementById('menuItems').classList.toggle('hidden');
     });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll("a[href^='#']");
-    links.forEach(link => {
-        link.addEventListener("click", function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: "smooth" });
-            }
-        });
-    });
-});
+document.getElementById("idiomas-button").addEventListener('click', () => {
+    document.getElementById('idioma-details').classList.toggle('hidden')
+})
+
 
 </script>
