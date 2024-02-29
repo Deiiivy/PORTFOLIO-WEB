@@ -6,7 +6,7 @@ import Education from '../components/Education.astro'
 import Skills from '../components/Skills.astro'
 ---
 
-<html lang="en">
+<html lang="en" class="dark">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/me-removebg-preview.png" />
@@ -37,7 +37,10 @@ import Skills from '../components/Skills.astro'
 	 html {
     background: #fff;
     letter-spacing: -0.025rem;
-	background: radial-gradient(circle, #1A1A2E, #000000);
+  }
+
+  html.dark {
+    background: radial-gradient(circle, #1A1A2E, #000000);
   }
 
   body,

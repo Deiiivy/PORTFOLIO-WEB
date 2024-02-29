@@ -4,46 +4,62 @@ import Github from '../icons/Github.astro'
 import Linkedin from '../icons/Linkedin.astro'
 import Email from '../icons/Email.astro'
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+    <section class="flex flex-col items-center justify-center py-28 ">
+        <a href="../../assets/CV-CURRICULUM.pdf" download="HojaDeVida" class="flex gap-2 py-2 px-5 rounded-xl bg-zinc-100 bg-opacity-5 border cursor-progress dark:border-slate-500 border-opacity-10 text-neutral-400 hover:bg-zinc-700">
+            <Download />
+            Download CV
+        </a>
 
-<section class="flex flex-col items-center justify-center py-28">
-    <a href="../../assets/CV-CURRICULUM.pdf" download="HojaDeVida" class="flex gap-2 py-2 px-5 rounded-xl bg-zinc-100 bg-opacity-5 cursor-progress border border-slate-300 border-opacity-10
-    text-neutral-400 hover:bg-zinc-700">
-        <Download />
-        Download CV
-</a>
+        <div class="m-10">
+            <h2 class="text-blue-800 font-bold font-mono text-3xl text-center">Software Developer</h2>
+            <h3 class="font-bold font-mono mt-4 text-3xl text-center dark:text-white">Deivy Patiño</h3>
 
-<div class="m-10">
-<h2 class="text-blue-800 font-bold font-mono text-3xl text-center">Software Developer</h2>
-<h3 class="text-white font-bold font-mono mt-4 text-3xl text-center">Deivy Patiño</h3>
+            <p class="text-center font-sans text-xl text-slate-400 mt-4">Always Learning about new paradigms and technologies to apply right solution in the right place 👨🏻‍💻</p>
+        </div>
 
-<p class="text-center font-sans text-xl text-slate-400 mt-4">Always Learning about new paradigms and technologies to apply right solution in 
-    the right place 👨🏻‍💻
-</p>
-</div>
+        <div class="social flex gap-7">
+            <a href="https://github.com/Deiiivy">
+                <Github />
+            </a>
+            <a href="https://www.linkedin.com/in/deivy-programmer/">
+                <Linkedin />
+            </a>
+            <a href="mailto:deivypr28@gmail.com">
+                <Email />
+            </a>
+        </div>
+    </section>
 
-<div class="social flex gap-7">
-    <a href="https://github.com/Deiiivy">
-        <Github />
-    </a>
+    <style>
+        :root {
+            --border-color-light: black;
+            --border-color-dark: gray;
+        }
 
-    <a href="https://www.linkedin.com/in/deivy-programmer/">
-        <Linkedin />
-    </a>
+        body {
+            --border-color: var(--border-color-light);
+        }
 
-    <a href="mailto:deivypr28@gmail.com">
-        <Email />
-    </a>
-</div>
+        body.dark {
+            --border-color: var(--border-color-dark);
+        }
 
-</section>
+        a {
+            border-color: var(--border-color);
+        }
 
-
-<style>
-    a:hover {
-        transition: transform 0.3s ease;
-        transform: translateY(-3px);
-    }
-
-</style>
-
-
+        a:hover {
+            transition: transform 0.3s ease;
+            transform: translateY(-3px);
+        }
+    </style>
+</body>
+</html>
