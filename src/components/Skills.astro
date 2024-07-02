@@ -1,136 +1,139 @@
 ---
-import React from '../icons/React.astro'
-import Mongo from '../icons/Mongo.astro'
-import ExpressJS from '../icons/ExpressJS.astro'
-import NodeJS from '../icons/NodeJS.astro'
-import Linux from '../icons/Linux.astro'
-import Css from '../icons/Css.astro'
-import Html from '../icons/Html.astro'
-import Javascript from '../icons/Javascript.astro'
-import Talwind from '../icons/Talwind.astro'
-import PotsgresSQL from '../icons/PotsgresSQL.astro'
-import Python from '../icons/Python.astro'
-import Space from '../icons/Space.astro'
-import Git from '../icons/Git.astro'
-import Konsole from '../icons/Konsole.astro'
+import React from "../icons/React.astro";
+import Mongo from "../icons/Mongo.astro";
+import ExpressJS from "../icons/ExpressJS.astro";
+import NodeJS from "../icons/NodeJS.astro";
+import Linux from "../icons/Linux.astro";
+import Css from "../icons/Css.astro";
+import Html from "../icons/Html.astro";
+import Javascript from "../icons/Javascript.astro";
+import Talwind from "../icons/Talwind.astro";
+import PotsgresSQL from "../icons/PotsgresSQL.astro";
+import Python from "../icons/Python.astro";
+import Space from "../icons/Space.astro";
+import Git from "../icons/Git.astro";
+import Konsole from "../icons/Konsole.astro";
+import Sass from "../icons/Sass.astro";
+import Charp from "../icons/Charp.astro";
+
+const iconsFront = [
+  { component: Javascript, name: "Javascript" },
+  { component: Talwind, name: "Tailwind" },
+  { component: Css, name: "Css" },
+  { component: Html, name: "Html" },
+  { component: Sass, name: "Sass" },
+  { component: React, name: "React" },
+];
 ---
 
-
-
 <section>
-    <h1 class="dark:text-white text-2xl mb-6 font-bold max-sm:text-center">Technologies</h1>
+  <h1 class="dark:text-white text-2xl mb-6 font-bold max-sm:text-center">
+    Technologies
+  </h1>
 
-    <p class="dark:text-white mb-4 max-md:text-xs max-md:m-10">In my journey through the world of web development, I have cultivated 
-        experience and skills in a variety of technologies. My stack includes: </p>
+  <p class="dark:text-white mb-4 max-md:text-xs max-md:m-10">
+    In my journey through the world of web development, I have cultivated
+    experience and skills in a variety of technologies. My stack includes:
+  </p>
 
-        <div class="flex gap-12 justify-center">
-            <article class="w-58 bg-opacity-35 rounded-lg p-4 
-            hover: bg-slate-800 hover:bg-opacity-30 cursor-pointer max-md:w-40">
-                <h3 class="dark:text-white font-bold text-center text-xl">Frontend</h3>
-                <div class="grid grid-cols-3 m-3 max-sm:grid-cols-2">
+  <div class="flex gap-12 justify-center">
+    <article
+      class="w-58 bg-opacity-35 rounded-lg p-4
+            hover: bg-slate-800 hover:bg-opacity-30 cursor-pointer max-md:w-40"
+    >
+      <h3 class="dark:text-white font-bold text-center text-xl">Frontend</h3>
+      <div class="grid grid-cols-3 m-3 max-sm:grid-cols-2 gap-2">
+       
+          {
+            iconsFront.map(({ component: IconComponent, name }) => (
+              <div>
+                <IconComponent />
+                <p>{name}</p>
+              </div>
+            ))
+          }
 
-                    <div class="flex flex-col items-center">
-                    <Html />
-                    <p>HTML</p>
-                </div>
+      </div>
+    </article>
 
-                <div class="flex flex-col items-center">
-                    <Css />
-                    <p>CSS</p>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <Javascript />
-                    <p>JavaScript</p>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <React />
-                    <p>React</p>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <Talwind />
-                    <p>TailwindCSS</p>
-                </div>
-                </div>
-            </article>
-
-
-            <article class="w-58 bg-opacity-35 rounded-lg p-4 
-            hover: bg-slate-800 hover:bg-opacity-30 cursor-pointer max-md:w-40">
-                <h3 class="dark:text-white font-bold text-center text-xl">Backend</h3>
-                <div class="grid grid-cols-3 m-3 max-sm:grid-cols-2">
-
-                    <div class="flex flex-col items-center">
-                    <ExpressJS />
-                    <p>Express</p>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <NodeJS />
-                    <p>Node JS</p>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <Mongo />
-                    <p>Mongo DB</p>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <PotsgresSQL />
-                    <p>PostgresSQL</p>
-                </div>
-                </div>
-            </article>
+    <article
+      class="w-58 bg-opacity-35 rounded-lg p-4
+            hover: bg-slate-800 hover:bg-opacity-30 cursor-pointer max-md:w-40"
+    >
+      <h3 class="dark:text-white font-bold text-center text-xl">Backend</h3>
+      <div class="grid grid-cols-3 m-3 max-sm:grid-cols-2">
+        <div class="flex flex-col items-center">
+          <Charp />
+          <p>C#</p>
         </div>
 
-
-        <div class="flex mt-12 gap-12 justify-center">
-            <article class="w-72 bg-opacity-35 rounded-lg p-4 
-            hover: bg-slate-800 hover:bg-opacity-30 cursor-pointer max-md:w-40">
-                <h3 class="dark:text-white font-bold text-center text-xl">Learning</h3>
-                <div class="grid grid-cols-3 m-3 max-sm:grid-cols-2">
-
-                    <div class="flex flex-col items-center">
-                    <Python />
-                    <p>Python</p>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <Space />
-                    <p>Astro</p>
-                </div>
-                
-                </div>
-            </article>
-
-
-            <article class="w-72 h-52 bg-opacity-35 rounded-lg p-4 
-            hover: bg-slate-800 hover:bg-opacity-30 cursor-pointer max-md:w-40">
-                <h3 class="dark:text-white font-bold text-center text-xl">Tools</h3>
-                <div class="grid grid-cols-3 m-3 max-sm:grid-cols-2">
-
-                    <div class="flex flex-col items-center">
-                    <Linux />
-                    <p>Linux</p>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <Git />
-                    <p>Git</p>
-                </div>
-
-                <div class="flex flex-col items-center">
-                    <Konsole />
-                    <p>Terminal</p>
-                </div>
-
-                </div>
-            </article>
+        <div class="flex flex-col items-center">
+          <NodeJS />
+          <p>Node JS</p>
         </div>
 
-        <footer class="mt-24">
-           <p class="text-center"> Made by Deivy 🏆</p>
-        </footer>
+        <div class="flex flex-col items-center">
+          <ExpressJS />
+          <p>Express</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <NodeJS />
+          <p>Node JS</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <Mongo />
+          <p>Mongo DB</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <PotsgresSQL />
+          <p>PostgresSQL</p>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="flex mt-12 gap-12 justify-center">
+    <article
+      class="w-72 bg-opacity-35 rounded-lg p-4
+            hover: bg-slate-800 hover:bg-opacity-30 cursor-pointer max-md:w-40"
+    >
+      <h3 class="dark:text-white font-bold text-center text-xl">Learning</h3>
+      <div class="grid grid-cols-3 m-3 max-sm:grid-cols-2">
+        <div class="flex flex-col items-center">
+          <Space />
+          <p>Astro</p>
+        </div>
+      </div>
+    </article>
+
+    <article
+      class="w-72 h-52 bg-opacity-35 rounded-lg p-4
+            hover: bg-slate-800 hover:bg-opacity-30 cursor-pointer max-md:w-40"
+    >
+      <h3 class="dark:text-white font-bold text-center text-xl">Tools</h3>
+      <div class="grid grid-cols-3 m-3 max-sm:grid-cols-2">
+        <div class="flex flex-col items-center">
+          <Linux />
+          <p>Linux</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <Git />
+          <p>Git</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <Konsole />
+          <p>Terminal</p>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <footer class="mt-24">
+    <p class="text-center">Made by Deivy 🏆</p>
+  </footer>
 </section>
